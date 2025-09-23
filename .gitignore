@@ -1,0 +1,12 @@
+# Ignore VS Code workspace settings
+.vscode/
+
+# Optional: ignore common build artifacts
+*.o
+*.out
+*.exe
+*.obj
+
+# Optional: ignore other temporary files
+*.log
+*.tmp
