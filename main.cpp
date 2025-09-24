@@ -4,6 +4,7 @@
 #include "selectionSortA.hpp"
 #include "selectionSortB.hpp"
 #include "mergesort.hpp"
+#include "quicksort.hpp"
 using namespace std;
 
 void printVector(const std::vector<int>& vec);
