@@ -2,6 +2,7 @@
 #include <cstdlib> // for rand and srand
 #include <ctime> // for time()
 #include "selectionSortA.hpp"
+#include "selectionSortB.hpp"
 using namespace std;
 
 void printVector(const std::vector<int>& vec);
@@ -10,7 +11,7 @@ std::vector<int> generateRandomVector(int size, int maxVal);
 int main() {
     std::vector<int> numbers = generateRandomVector(10, 50);
     printVector(numbers);
-    selectionSortA(numbers);
+    selectionSortB(numbers);
     printVector(numbers);
 
 }

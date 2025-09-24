@@ -7,4 +7,4 @@
 
 void selectionSortA(std::vector<int> &ar); 
 
-#endif
+#endif //SELECTIONSORTA
