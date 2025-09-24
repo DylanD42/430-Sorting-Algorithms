@@ -3,6 +3,7 @@
 #include <ctime> // for time()
 #include "selectionSortA.hpp"
 #include "selectionSortB.hpp"
+#include "mergesort.hpp"
 using namespace std;
 
 void printVector(const std::vector<int>& vec);
@@ -11,7 +12,7 @@ std::vector<int> generateRandomVector(int size, int maxVal);
 int main() {
     std::vector<int> numbers = generateRandomVector(10, 50);
     printVector(numbers);
-    selectionSortB(numbers);
+    mergesort(numbers);
     printVector(numbers);
 
 }
@@ -40,9 +41,9 @@ void printVector(const std::vector<int>& vec) {
 /*
 Algs to implement                               | Status
 ------------------------------------------------|--------------
-void selectionSortA(std::vector<int> &ar);      |   Pending
-void selectionSortB(std::vector<int> &ar);      |   Pending
-void mergesort(std::vector<int> &ar);           |   Pending
+void selectionSortA(std::vector<int> &ar);      |   Done
+void selectionSortB(std::vector<int> &ar);      |   Done
+void mergesort(std::vector<int> &ar);           |   Done
 void quicksort(std::vector<int> &ar);           |   Pending
 
 */
