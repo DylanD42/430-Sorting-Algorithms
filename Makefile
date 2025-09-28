@@ -5,6 +5,14 @@ CXXFLAGS := -Wall -Wextra -std=c++20
 # Output executable name
 TARGET := run
 
+# Detect OS
+ifeq ($(OS),Windows_NT)
+    RM := del /Q
+    TARGET := run.exe
+else
+    RM := rm -f
+endif
+
 # All .cpp files in the current directory
 SRCS := $(wildcard *.cpp)
 # Corresponding object files
@@ -23,6 +31,6 @@ $(TARGET): $(OBJS)
 
 # Clean up build files
 clean:
-	rm -f $(OBJS) $(TARGET)
+	$(RM) $(OBJS) $(TARGET)
 
 .PHONY: all clean
