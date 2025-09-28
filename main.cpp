@@ -1,21 +1,41 @@
 #include <iostream>
 #include <cstdlib> // for rand and srand
 #include <ctime> // for time()
-#include "selectionSortA.hpp"
-#include "selectionSortB.hpp"
-#include "mergesort.hpp"
-#include "quicksort.hpp"
+#include "selectionSortA.h"
+#include "selectionSortB.h"
+#include "mergesort.h"
+#include "quicksort.h"
 using namespace std;
 
 void printVector(const std::vector<int>& vec);
 std::vector<int> generateRandomVector(int size, int maxVal);
 
 int main() {
-    std::vector<int> numbers = generateRandomVector(10, 50);
-    printVector(numbers);
-    mergesort(numbers);
-    printVector(numbers);
+    // Selection Sort A
+    auto vec = generateRandomVector(100, 1000);
+    selectionSortA(vec);
+    cout << "Selection Sort A:\n";
+    printVector(vec);
 
+    // Selection Sort B
+    vec = generateRandomVector(100, 1000);
+    selectionSortB(vec);
+    cout << "\nSelection Sort B:\n";
+    printVector(vec);
+
+    // Merge Sort
+    vec = generateRandomVector(100, 1000);
+    mergesort(vec);  // assuming mergesort takes just (vector<int>&)
+    cout << "\nMerge Sort:\n";
+    printVector(vec);
+
+    // Quick Sort
+    vec = generateRandomVector(100, 1000);
+    quicksort(vec);  // assuming quicksort takes just (vector<int>&)
+    cout << "\nQuick Sort:\n";
+    printVector(vec);
+
+    return 0;
 }
 
 std::vector<int> generateRandomVector(int size, int maxVal) {
@@ -39,13 +59,5 @@ void printVector(const std::vector<int>& vec) {
     }
     std::cout << "]\n";
 }
-/*
-Algs to implement                               | Status
-------------------------------------------------|--------------
-void selectionSortA(std::vector<int> &ar);      |   Done
-void selectionSortB(std::vector<int> &ar);      |   Done
-void mergesort(std::vector<int> &ar);           |   Done
-void quicksort(std::vector<int> &ar);           |   Pending
 
-*/
 

@@ -1,8 +1,7 @@
-#include "selectionSortB.hpp"
+#include "selectionSortB.h"
 using namespace std;
 
 void selectionSortB(vector<int> &ar){
-    cout << "test" << endl;
     int n = static_cast<int>(ar.size());
     for(int i = 0; i != n-1; i++){\
         int min = i;

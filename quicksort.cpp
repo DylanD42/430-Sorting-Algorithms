@@ -1,4 +1,4 @@
-#include "quicksort.hpp"
+#include "quicksort.h"
 #include <algorithm>
 int partition(std::vector<int> &ar, int p, int r){
     int x = ar[r];
@@ -8,8 +8,9 @@ int partition(std::vector<int> &ar, int p, int r){
             i = i+1;
             std::swap(ar[i],ar[j]);
         }
-        std::swap(ar[i+1],ar[r]);
+        
     }
+    std::swap(ar[i+1],ar[r]);
     return (i+1);
 }
 void quicksortHelper(std::vector<int> &ar, int p, int r){
@@ -29,5 +30,5 @@ int getRandomPivotIndex(const std::vector<int>& ar) {
 void quicksort(std::vector<int> &ar){
     //int p = getRandomPivotIndex(ar);
     //quicksortHelper(ar,p,ar.size() - 1);
-    quicksortHelper(ar,1,ar.size() - 1);
+    quicksortHelper(ar,0,ar.size() - 1);
 }
