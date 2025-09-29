@@ -5,12 +5,14 @@
 #include "selectionSortB.h"
 #include "mergesort.h"
 #include "quicksort.h"
+#include "insertionsort.h"
 using namespace std;
 
 void printVector(const std::vector<int>& vec);
 std::vector<int> generateRandomVector(int size, int maxVal);
 
 int main() {
+    /*
     // Selection Sort A
     auto vec = generateRandomVector(100, 1000);
     selectionSortA(vec);
@@ -35,6 +37,12 @@ int main() {
     cout << "\nQuick Sort:\n";
     printVector(vec);
 
+*/
+    // Insertion Sort
+    auto vec = generateRandomVector(100, 1000);
+    insertionsort(vec);  
+    cout << "\nInsertion Sort:\n";
+    printVector(vec);
     return 0;
 }
 
@@ -60,4 +68,11 @@ void printVector(const std::vector<int>& vec) {
     std::cout << "]\n";
 }
 
-
+/*
+Done    Insertion Sort
+Not Done    Bubble Sort A - Bubble sort without swap detection.
+Not Done    Bubble Sort B - Bubble sort with swap detection which starts at the beginning of the list and works to the end.
+Not Done    Bubble Sort C - Bubble sort with swap detection whcih starts at the end of the list and works to the beginning.
+Not Done    Counting Sort
+Not Done    Radix Sort (using binary radix and bitwise counting)
+*/
