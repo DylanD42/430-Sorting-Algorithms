@@ -6,6 +6,9 @@
 #include "mergesort.h"
 #include "quicksort.h"
 #include "insertionsort.h"
+#include "bubblesortA.h"
+#include "bubblesortB.h"
+#include "bubblesortC.h"
 using namespace std;
 
 void printVector(const std::vector<int>& vec);
@@ -43,6 +46,23 @@ int main() {
     insertionsort(vec);  
     cout << "\nInsertion Sort:\n";
     printVector(vec);
+
+    // Bubble Sort A
+    vec = generateRandomVector(100, 1000);
+    bubblesortA(vec);  
+    cout << "\nBubble Sort A:\n";
+    printVector(vec);
+
+    // Bubble Sort B
+    vec = generateRandomVector(100, 1000);
+    bubblesortB(vec);  
+    cout << "\nBubble Sort B:\n";
+    printVector(vec);
+    // Bubble Sort C
+    vec = generateRandomVector(100, 1000);
+    bubblesortC(vec);  
+    cout << "\nBubble Sort C:\n";
+    printVector(vec);
     return 0;
 }
 
@@ -70,9 +90,9 @@ void printVector(const std::vector<int>& vec) {
 
 /*
 Done    Insertion Sort
-Not Done    Bubble Sort A - Bubble sort without swap detection.
-Not Done    Bubble Sort B - Bubble sort with swap detection which starts at the beginning of the list and works to the end.
-Not Done    Bubble Sort C - Bubble sort with swap detection whcih starts at the end of the list and works to the beginning.
+Done    Bubble Sort A - Bubble sort without swap detection.
+Done    Bubble Sort B - Bubble sort with swap detection which starts at the beginning of the list and works to the end.
+Done    Bubble Sort C - Bubble sort with swap detection whcih starts at the end of the list and works to the beginning.
 Not Done    Counting Sort
 Not Done    Radix Sort (using binary radix and bitwise counting)
 */
