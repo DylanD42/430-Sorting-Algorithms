@@ -9,6 +9,7 @@
 #include "bubblesortA.h"
 #include "bubblesortB.h"
 #include "bubblesortC.h"
+#include "countingsort.h"
 using namespace std;
 
 void printVector(const std::vector<int>& vec);
@@ -62,6 +63,11 @@ int main() {
     vec = generateRandomVector(100, 1000);
     bubblesortC(vec);  
     cout << "\nBubble Sort C:\n";
+    printVector(vec);
+    // Counting Sort
+    vec = generateRandomVector(100, 1000);
+    countingsort(vec);  
+    cout << "\nCounting Sort:\n";
     printVector(vec);
     return 0;
 }
