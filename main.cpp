@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib> // for rand and srand
 #include <ctime> // for time()
+
 #include "selectionSortA.h"
 #include "selectionSortB.h"
 #include "mergesort.h"
@@ -10,13 +11,13 @@
 #include "bubblesortB.h"
 #include "bubblesortC.h"
 #include "countingsort.h"
+#include "radixsort.h"
 using namespace std;
 
 void printVector(const std::vector<int>& vec);
 std::vector<int> generateRandomVector(int size, int maxVal);
 
 int main() {
-    /*
     // Selection Sort A
     auto vec = generateRandomVector(100, 1000);
     selectionSortA(vec);
@@ -41,9 +42,8 @@ int main() {
     cout << "\nQuick Sort:\n";
     printVector(vec);
 
-*/
     // Insertion Sort
-    auto vec = generateRandomVector(100, 1000);
+    vec = generateRandomVector(100, 1000);
     insertionsort(vec);  
     cout << "\nInsertion Sort:\n";
     printVector(vec);
@@ -59,16 +59,25 @@ int main() {
     bubblesortB(vec);  
     cout << "\nBubble Sort B:\n";
     printVector(vec);
+
     // Bubble Sort C
     vec = generateRandomVector(100, 1000);
     bubblesortC(vec);  
     cout << "\nBubble Sort C:\n";
     printVector(vec);
+
     // Counting Sort
     vec = generateRandomVector(100, 1000);
     countingsort(vec);  
     cout << "\nCounting Sort:\n";
     printVector(vec);
+
+    // Radix Sort
+    vec = generateRandomVector(100, 1000);
+    radixsort(vec);  
+    cout << "\nRadix Sort:\n";
+    printVector(vec);
+
     return 0;
 }
 
@@ -99,6 +108,6 @@ Done    Insertion Sort
 Done    Bubble Sort A - Bubble sort without swap detection.
 Done    Bubble Sort B - Bubble sort with swap detection which starts at the beginning of the list and works to the end.
 Done    Bubble Sort C - Bubble sort with swap detection whcih starts at the end of the list and works to the beginning.
-Not Done    Counting Sort
-Not Done    Radix Sort (using binary radix and bitwise counting)
+Done    Counting Sort
+Done    Radix Sort (using binary radix and bitwise counting)
 */
