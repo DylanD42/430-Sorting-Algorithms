@@ -102,12 +102,3 @@ void printVector(const std::vector<int>& vec) {
     }
     std::cout << "]\n";
 }
-
-/*
-Done    Insertion Sort
-Done    Bubble Sort A - Bubble sort without swap detection.
-Done    Bubble Sort B - Bubble sort with swap detection which starts at the beginning of the list and works to the end.
-Done    Bubble Sort C - Bubble sort with swap detection whcih starts at the end of the list and works to the beginning.
-Done    Counting Sort
-Done    Radix Sort (using binary radix and bitwise counting)
-*/
